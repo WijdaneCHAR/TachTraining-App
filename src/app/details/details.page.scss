@@ -1,0 +1,31 @@
+.title{
+    color: var(--ion-color-primary-shade);
+ font-family: 'Cinzel';
+}
+.informations{
+    background-color:var(--border-color);
+    height: fit-content;
+    width: 80%;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px var(--shadow-color);
+}
+.informations img,.purchase{
+    width: 50%;
+    margin-left: 25%;
+}
+.informations p{
+    color: var(--p-color);
+    font-size: 20px;
+    white-space: 5px;
+    margin-top: 40px;
+    font-weight: 700;
+}
+.informations h1{
+    color: var(--main-color);
+}
+.toolbar{
+    display: flex;
+    flex-direction: row;
+}

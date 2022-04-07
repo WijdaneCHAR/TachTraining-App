@@ -1,0 +1,28 @@
+.title{
+    color: var(--ion-color-primary-shade);
+    font-family: 'Cinzel';
+}
+.SignUp{
+    margin: 30px;
+    margin-top: 30%;
+    text-align: center;
+}
+.Input{
+    text-align: start;
+  }
+  .Label{
+  color: var(--p-color);
+  width: 40%;
+  text-align: end;
+  margin-right:15px ;
+  }
+  .field{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    }
+
+    .toolbar{
+        display: flex;
+        flex-direction: row;
+    }

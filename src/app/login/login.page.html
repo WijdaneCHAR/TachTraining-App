@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon class="back" name="chevron-back-outline" (click)="backPage()" ></ion-icon>
+    <ion-title class="title">login Page:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<div class="Signin">
+  <h1>TechTraining App</h1>
+  <div class="field"><ion-label class="Label">Email :</ion-label>
+  <ion-input class="Input" placeholder="name@example.com" [(ngModel)]="user.email"  type="email"></ion-input>
+  </div>
+  
+  <div class="field"><ion-label  class="Label">Password :</ion-label>
+  <ion-input class="Input" [(ngModel)]="user.password"  type="password" placeholder="*************" ></ion-input>
+  </div>
+  <div>
+     <ion-button (click)="loginUser()">LogIn</ion-button>
+  </div>
+ 
+
+  <button (click)="registerUser()" class="Button">do you have an account? create one</button>
+</div>
+
+
+ 
+</ion-content>

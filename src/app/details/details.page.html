@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon class="back" name="chevron-back-outline" (click)="backPage()" ></ion-icon>
+    <ion-title class="title">{{selectedFormation.name}} Formation : </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid  *ngIf="selectedFormation" class="informations">
+    <ion-col>
+      <ion-row>
+        <img [src]="selectedFormation.image">
+      </ion-row>
+      <ion-row>
+        <p>{{selectedFormation.description}}</p>
+      </ion-row>
+      <ion-row>
+        <h1>{{selectedFormation.price}} $</h1>
+      </ion-row>
+      <ion-row>
+        <ion-button class="purchase" type="submit" (click)="authenticationPage()">purchase</ion-button>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+</ion-content>

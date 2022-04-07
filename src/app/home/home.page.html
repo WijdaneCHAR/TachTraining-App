@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <h1>Welcome To TechTraining</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item class="title"><h3> list of training : </h3></ion-item>
+  <div  *ngFor="let formation of listeFormations" class="divformation">
+    <div class="idformation">{{formation.id}}</div>
+    <div class="nameformation"> 
+      {{formation.name}}
+      <ion-button 
+        class="details"
+          (click)="getDetails(formation)">
+          Details
+      </ion-button>
+    </div>    
+    
+  </div>
+</ion-list>
+</ion-content>

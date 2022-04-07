@@ -1,0 +1,38 @@
+.title{
+    color: var(--ion-color-primary-shade);
+    font-family: 'Cinzel';
+}
+h1{
+  text-align: center;
+  color: var(--main-color);
+  font-family: 'Lobster';
+}
+.Input{
+  text-align: start;
+}
+.Label{
+color: var(--p-color);
+width: 40%;
+text-align: end;
+margin-right:15px ;
+}
+.Signin{
+  margin: 30px;
+  margin-top: 30%;
+  text-align: center;
+}
+.field{
+display: flex;
+flex-direction: row;
+margin: 20px;
+}
+.Button{
+  margin-top: 20px;
+  background-color: transparent;
+  color: var(--ion-color-primary-shade);
+  text-decoration: underline;
+}
+.toolbar{
+  display: flex;
+  flex-direction: row;
+}

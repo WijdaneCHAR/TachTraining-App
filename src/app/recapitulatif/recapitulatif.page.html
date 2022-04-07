@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon class="back" name="chevron-back-outline" (click)="backPage()" ></ion-icon>
+    <ion-title class="title">purchase summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>Date :</div>
+      </ion-col>
+      <ion-col>
+        <div>{{maDate.getDate()}}/{{maDate.getMonth()}}/{{maDate.getFullYear()}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>Fullname :</div>
+      </ion-col>
+      <ion-col>
+        <div>{{gettingData.fullName}}</div>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col>
+        <div>Phone Number :</div>
+      </ion-col>
+      <ion-col>
+        <div> {{gettingData.phone}} </div>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col>
+        <div>Course title :</div>
+      </ion-col>
+      <ion-col>
+        <div> {{gettingData.name}} </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>For :</div>
+      </ion-col>
+      <ion-col>
+        <div>{{gettingData.price}} $</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+</ion-content>

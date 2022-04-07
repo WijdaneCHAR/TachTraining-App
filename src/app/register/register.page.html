@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon class="back" name="chevron-back-outline" (click)="backPage()" ></ion-icon>
+    <ion-title class="title">register know </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="SignUp"> 
+    <div class="field">
+    <ion-label class="Label">Name</ion-label>
+    <ion-input class="Input" placeholder="enter your fullname" type="email" [(ngModel)]="user.fullname" ></ion-input>
+    </div>
+    
+    <div class="field">
+    <ion-label class="Label">Email</ion-label>
+    <ion-input class="Input" placeholder="enter your mail" type="email" [(ngModel)]="user.email" ></ion-input>
+    </div>
+
+    <div class="field">
+    <ion-label class="Label">Phone</ion-label>
+    <ion-input class="Input" placeholder="enter your phoneNumber" inputmode="tel" [(ngModel)]="user.phoneNumber" ></ion-input>
+    </div>
+
+    <div class="field">
+    <ion-label class="Label">Password</ion-label>
+    <ion-input class="Input" placeholder="enter your password"type="password" [(ngModel)]="password" ></ion-input>
+    </div>
+
+    <div class="field">
+    <ion-label class="Label">Confirm Password</ion-label>
+    <ion-input class="Input" placeholder="Confirm your password" type="password" [(ngModel)]="confirmPassword" ></ion-input>
+    </div>
+  <ion-button color="tertiary" (click)="signUp()">Signup</ion-button>
+</div>
+ 
+</ion-content>
