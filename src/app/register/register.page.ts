@@ -45,7 +45,8 @@ export class RegisterPage implements OnInit {
         setDoc(doc(db, 'users', usr.user.uid), {
           FullName: this.user.fullname,
           Email: this.user.email,
-          Phone: this.user.phoneNumber
+          Phone: this.user.phoneNumber,
+          Course:this.data.name
         }).then(() => {
           this.data = {...this.data, fullName: this.user.fullname};
           this.router.navigate(['/recapitulatif',this.data]);})
