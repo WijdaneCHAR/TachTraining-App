@@ -9,16 +9,25 @@
   <ion-grid  *ngIf="selectedFormation" class="informations">
     <ion-col>
       <ion-row>
-        <img [src]="selectedFormation.image">
+        <img [src]="selectedFormation.image" style="padding: 20px 0;">
       </ion-row>
       <ion-row>
-        <p>{{selectedFormation.description}}</p>
+        <h1 style="width: 100%;
+        text-align: center;
+        font-weight: 700;
+        color: var(--p-color);
+        padding: 10px;">{{selectedFormation.name}}</h1>
+      </ion-row> 
+      <ion-row>
+        <ion-button style="width: 100%;
+        text-align: center; margin: 10px 0;" type="submit" (click)="authenticationPage()">purchase</ion-button>
       </ion-row>
       <ion-row>
-        <h1>{{selectedFormation.price}} $</h1>
+        <div class="flexdiv" style="padding: 10px;"><h1>{{selectedFormation.price}} $</h1>
+        <h1>{{selectedFormation.duration}} </h1></div>
       </ion-row>
-      <ion-row>
-        <ion-button class="purchase" type="submit" (click)="authenticationPage()">purchase</ion-button>
+     <ion-row>
+        <span  style="padding: 20px 0;">{{selectedFormation.description}}</span>
       </ion-row>
     </ion-col>
   </ion-grid>

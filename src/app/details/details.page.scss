@@ -1,31 +1,31 @@
 .title{
-    color: var(--ion-color-primary-shade);
+ color: var(--ion-color-primary-shade);
  font-family: 'Cinzel';
+ width: 85%;
+ float: right;
+}
+.back{
+    
+width: 10%;
+float: left;
 }
 .informations{
     background-color:var(--border-color);
-    height: fit-content;
     width: 80%;
+    height: 90%;
+    overflow-y: scroll;
     margin-top: 50px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 10px 10px 5px var(--shadow-color);
+    text-align: center;
 }
-.informations img,.purchase{
-    width: 50%;
-    margin-left: 25%;
-}
-.informations p{
-    color: var(--p-color);
-    font-size: 20px;
-    white-space: 5px;
-    margin-top: 40px;
-    font-weight: 700;
-}
-.informations h1{
-    color: var(--main-color);
-}
-.toolbar{
+.flexdiv{
     display: flex;
     flex-direction: row;
+    color: var(--ion-color-primary-shade);
+    width: 100%;
+}
+.flexdiv h1{
+    width: 50%;
 }

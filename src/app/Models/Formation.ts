@@ -4,5 +4,5 @@ export interface Formation{
     description: string;
     price: number;
     image: string;
-    rating: number;
+    duration: string;
 }

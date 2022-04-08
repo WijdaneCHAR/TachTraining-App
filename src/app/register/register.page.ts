@@ -8,7 +8,9 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authen } from './../../environments/environment';
 import { doc, setDoc } from 'firebase/firestore';
 
+
 import { Location } from '@angular/common';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -19,7 +21,17 @@ export class RegisterPage implements OnInit {
   data: any;
   password: string;
   confirmPassword: string;
-
+  Toast = Swal.mixin({
+    toast: true,
+    position: 'top-bottom',
+    showConfirmButton: false,
+    timer: 2000,
+    width:"100%",
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
   constructor(private route: ActivatedRoute, private router: Router,private location : Location) { }
 
   ngOnInit() {
@@ -39,10 +51,16 @@ export class RegisterPage implements OnInit {
           this.router.navigate(['/recapitulatif',this.data]);})
         .catch(() => console.log('Failed to create doc'));
       })
-      .catch(() => console.log('Signup failed')
+      .catch(() => { this.Toast.fire({
+        icon: 'error',
+        title: 'Signed up failed'
+      })}
       );
     } else {
-      alert('Password dont match confirm password');
+      this.Toast.fire({
+        icon: 'error',
+        title: 'Password do not match'
+      });
     }
 
   }

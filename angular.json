@@ -31,7 +31,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss","node_modules/sweetalert2/src/sweetalert2.scss"],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
