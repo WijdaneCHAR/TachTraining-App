@@ -1,5 +1,6 @@
 # ionic
 ✔ Preview :
+= 
   1- 'Home Page' dans laquelle existent les différentes formations à choisir 
   
   ![listeformations](https://user-images.githubusercontent.com/87330491/162535995-bd2bd576-fb97-4059-8473-50cb2d5523c0.png)
@@ -15,6 +16,12 @@
 
   4-'Purchase Summary Page' récapitulatif d'achat de la formation
   ![summary](https://user-images.githubusercontent.com/87330491/162539015-94bdf359-f49d-41c6-8426-3e8137149e5b.png)
-✔ FireBase :
-![Uploading users.png…]()
+  
+✔ FireBase : 
+=
+![authentication](https://user-images.githubusercontent.com/87330491/162617087-353eaae3-4971-4dd0-a6cb-bd20fda806ce.png)
+![Formation](https://user-images.githubusercontent.com/87330491/162617089-9530cf0f-d610-407b-b610-0dc50e8d2480.png)
+![users](https://user-images.githubusercontent.com/87330491/162617115-af16c625-bffe-47c3-85e0-745475296585.png)
+
 ✔ Code :
+= 
