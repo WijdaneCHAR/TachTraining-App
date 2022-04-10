@@ -29,6 +29,9 @@ export class HomePage {
     this.router.navigate(['/details', formation]);
   }
 
+  logIn():void{
+    this.router.navigateByUrl('/login');
+  }
 }
 
 
