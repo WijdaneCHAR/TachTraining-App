@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.example.app',
-  appName: 'myLoginProject',
+  appName: 'TechTraining',
   webDir: 'www',
   bundledWebRuntime: false,
   cordova: {
