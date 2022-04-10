@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { authen, db } from 'src/environments/environment';
 import { UserSignin } from '../Models/User';
 import { Location } from '@angular/common';
@@ -36,10 +36,11 @@ export class LoginPage implements OnInit {
     .then((usr)=>{
       getDoc(doc(db, "users", usr.user.uid))
       .then((doc) => {
-        const userData = doc.data()
-        this.gettedFormation = {...this.gettedFormation, fullName: userData.FullName}          
+        const userData = doc.data();
+        this.gettedFormation = {...this.gettedFormation, fullName: userData.FullName}     
         this.router.navigate(['/recapitulatif',this.gettedFormation]);
       })
+      updateDoc(doc(db, "users", usr.user.uid),{Course:this.gettedFormation.name});
     }).catch(()=>{this.Toast.fire({
       icon: 'error',
       title: 'Signed in failed'

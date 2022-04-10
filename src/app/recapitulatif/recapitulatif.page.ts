@@ -14,7 +14,6 @@ import { UserSignin } from '../Models/User';
 export class RecapitulatifPage implements OnInit {
   gettingData: any;
   maDate: any = new Date();
-  user = new UserSignin();
   constructor(private route: ActivatedRoute, private router: Router,private location : Location) { }
 
   ngOnInit() {
@@ -23,13 +22,8 @@ export class RecapitulatifPage implements OnInit {
 
   logOut():void{
     signOut(authen).then(() => {
-     this.router.navigateByUrl('/home');
-    }).then((usr) => {
-        setDoc(doc(db, 'users'), {
-          Course:""
-        })
-        .catch(() => console.log('Failed to create doc'));
-      }).catch((error) => {
+    this.router.navigateByUrl('/home');
+    }).catch((error) => {
       // An error happened.
     });
   }
