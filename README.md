@@ -18,6 +18,7 @@
 ![register](https://user-images.githubusercontent.com/87330491/162537912-529a46b3-5390-4263-a494-fdd00ee55010.PNG)
 
   4-'Purchase Summary Page' récapitulatif d'achat de la formation
+  
   ![summary](https://user-images.githubusercontent.com/87330491/162618185-eca66224-b4aa-40f7-b2e8-a04aae4e6e44.png)
 
   
