@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { authen, db } from 'src/environments/environment';
 import { UserSignin } from '../Models/User';
 import { Location } from '@angular/common';
@@ -35,9 +35,14 @@ export class LoginPage implements OnInit {
     signInWithEmailAndPassword(authen,this.user.email,this.user.password)
     .then((usr)=>{
       getDoc(doc(db, "users", usr.user.uid))
-      .then((doc) => {
-        const userData = doc.data();
-        this.gettedFormation = {...this.gettedFormation, fullName: userData.FullName}     
+      .then((docc) => {
+        const userData = docc.data();
+        setDoc(doc(db, usr.user.uid, usr.user.uid+this.gettedFormation.name), {
+          course : this.gettedFormation.name,
+          price : this.gettedFormation.price,
+          duration : this.gettedFormation.duration
+        }).catch(() => console.log('Failed to create doc'));
+        this.gettedFormation = {...this.gettedFormation, fullName: userData.FullName,userId : userData.Id};    
         this.router.navigate(['/recapitulatif',this.gettedFormation]);
       })
       updateDoc(doc(db, "users", usr.user.uid),{Course:this.gettedFormation.name});

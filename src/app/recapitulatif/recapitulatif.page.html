@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar class="toolbar">
-    <ion-icon class="back" name="chevron-back-outline" (click)="backPage()" ></ion-icon>
     <ion-title class="title">purchase summary</ion-title>
   </ion-toolbar>
   <button style="float:right;margin: 10px;color: red;background-color: transparent;text-decoration: underline;" (click)="logOut()">Log out</button>
@@ -49,6 +48,14 @@
       </ion-col>
     </ion-row>
   </ion-grid> 
+
+  <details>
+    <summary>Your list training </summary>
+    <ion-row class="container" *ngFor="let formation of userData">
+      <ion-col >
+      <p>{{formation.course}} for {{formation.price}}$ during  {{formation.duration}}</p>
+    </ion-col>  
+    </ion-row> 
+  </details>
   </div>
-  <div class="footer">© CopyRights TechTraining 2022</div>
 </ion-content>

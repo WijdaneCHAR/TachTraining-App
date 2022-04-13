@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { authen, db } from 'src/environments/environment';
 import { signOut } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { UserSignin } from '../Models/User';
 @Component({
   selector: 'app-recapitulatif',
@@ -14,10 +14,17 @@ import { UserSignin } from '../Models/User';
 export class RecapitulatifPage implements OnInit {
   gettingData: any;
   maDate: any = new Date();
+  userData: any;
   constructor(private route: ActivatedRoute, private router: Router,private location : Location) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.gettingData = this.route.snapshot.params;
+    const querySnapshot = await getDocs(collection(db, this.gettingData.userId));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+      data.push(doc.data());
+    });
+    this.userData = data;
   }
 
   logOut():void{

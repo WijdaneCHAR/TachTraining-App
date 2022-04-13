@@ -46,9 +46,15 @@ export class RegisterPage implements OnInit {
           FullName: this.user.fullname,
           Email: this.user.email,
           Phone: this.user.phoneNumber,
-          Course:this.data.name
+          Course:this.data.name,
+          Id:usr.user.uid,
         }).then(() => {
-          this.data = {...this.data, fullName: this.user.fullname};
+          setDoc(doc(db, usr.user.uid, usr.user.uid+this.data.name), {
+            course : this.data.name,
+            price : this.data.price,
+            duration : this.data.duration
+          }).catch(() => console.log('Failed to create doc'));
+          this.data = {...this.data, fullName: this.user.fullname,userId : usr.user.uid };
           this.router.navigate(['/recapitulatif',this.data]);})
         .catch(() => console.log('Failed to create doc'));
       })
