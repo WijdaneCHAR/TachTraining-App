@@ -7,6 +7,11 @@
 
   🔸 Demo:
   
+
+https://user-images.githubusercontent.com/87330491/163894633-2d32bfbc-7f2b-4ba6-8645-e55c6f0ef5e9.mp4
+
+
+  
 ## ✔ FireBase : 
 
      --> La 1ere collection dans la BDD est l'ensemble des formations à reserver contenant son nom , son prix , sa durée .....
