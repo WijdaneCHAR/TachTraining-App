@@ -26,8 +26,21 @@
   
 ✔ FireBase : 
 =
-![authentication](https://user-images.githubusercontent.com/87330491/162617087-353eaae3-4971-4dd0-a6cb-bd20fda806ce.png)
-![Formation](https://user-images.githubusercontent.com/87330491/162617089-9530cf0f-d610-407b-b610-0dc50e8d2480.png)
-![users](https://user-images.githubusercontent.com/87330491/162617115-af16c625-bffe-47c3-85e0-745475296585.png)
+     --> La 1ere collection dans la BDD est l'ensemble des formations à reserver contenant son nom , son prix , sa durée .....
+
+![Formations](https://user-images.githubusercontent.com/87330491/163887298-d7c4ec5c-21c3-4366-ab2b-afead8836301.png)
+
+     --> Cette collection contient le profil du client ses informations , le cours reservé et un Id généré menant aux autres formations 
+     résérvés par ce client 
+
+![users](https://user-images.githubusercontent.com/87330491/163888211-c5a2d642-37cc-444f-ae25-b4b548ea83f1.png)
+
+     --> l'ensemble des formations d'un client 
+     
+![displayformation](https://user-images.githubusercontent.com/87330491/163889323-49d8e152-e700-48bc-99bd-5b05382ccca8.png)
+
+
+
+
 
 
